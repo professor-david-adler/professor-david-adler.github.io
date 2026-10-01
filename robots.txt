@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://professor-david-adler.github.io/sitemap.xml
