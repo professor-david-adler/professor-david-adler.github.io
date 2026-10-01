@@ -31,6 +31,7 @@
         "@id": "https://professor-david-adler.github.io/#person",
         "name": "Professor David Adler",
         "honorificPrefix": "Professor",
+        "image": "https://professor-david-adler.github.io/professor-david-adler.png",
         "url": "https://professor-david-adler.github.io/",
         "jobTitle": "Chief Scientific & Medical Officer",
         "worksFor": {
@@ -163,12 +164,30 @@
       color:#44556a;
     }
     .stats{
-      display:flex; flex-wrap:wrap; gap:12px 28px;
+      display:grid;
+      grid-template-columns:max-content max-content minmax(260px,1fr);
+      gap:18px 28px;
+      align-items:baseline;
       margin-top:34px; padding-top:26px;
       border-top:1px solid var(--line);
       color:var(--muted); font-size:.94rem;
     }
+    .stats > span{display:block}
     .stats strong{color:var(--ink); font-size:1.16rem}
+    .about-grid{
+      display:grid;
+      grid-template-columns:minmax(220px,300px) minmax(0,1fr);
+      gap:46px;
+      align-items:start;
+    }
+    .portrait-wrap{margin:0}
+    .portrait{
+      display:block;
+      width:100%;
+      height:auto;
+      border:1px solid var(--line);
+      box-shadow:0 6px 24px rgba(18,34,53,.08);
+    }
     main section{scroll-margin-top:88px}
     .section{padding:72px 0; border-bottom:1px solid var(--line)}
     .section.soft{background:var(--soft)}
@@ -257,6 +276,9 @@
       .section{padding:56px 0}
       .section-head{grid-template-columns:1fr; gap:16px}
       .outlet-grid,.book-groups{grid-template-columns:1fr}
+      .about-grid{grid-template-columns:1fr; gap:28px}
+      .portrait-wrap{max-width:320px}
+      .stats{grid-template-columns:1fr; gap:8px; align-items:start}
     }
     @media (max-width:520px){
       .wrap{width:min(var(--max), calc(100% - 28px))}
@@ -305,24 +327,22 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">01 · About</span>
+            <span class="section-number">About</span>
             <h3>Professor David Adler</h3>
           </div>
           <p class="section-intro">Professional context for the 2026 publication record.</p>
         </div>
 
-        <div class="bio">
-          <p><strong>Professor David Adler</strong> is Chief Scientific &amp; Medical Officer of the PATHORA Institute of Pathology &amp; Tissue Medicine. He is a senior pharmaceutical leader in oncology drug development and translational medicine with over 15 years of experience, including a decade in senior leadership at Bayer AG’s Global Oncology Clinical Development organization.</p>
+        <div class="about-grid">
+          <figure class="portrait-wrap">
+            <img class="portrait" src="professor-david-adler.png" alt="Professor David Adler" width="1122" height="1402">
+          </figure>
 
-          <p>He holds academic appointments at the Hebrew University of Jerusalem, Ben-Gurion University of the Negev, and the University of Bonn. His work focuses on the strategic decisions that shape the path from scientific discovery through clinical development and influence whether promising innovations ultimately become medicines.</p>
-        </div>
+          <div class="bio">
+            <p><strong>Professor David Adler</strong> is Chief Scientific &amp; Medical Officer of the PATHORA Institute of Pathology &amp; Tissue Medicine. He is a senior pharmaceutical leader in oncology drug development and translational medicine with over 15 years of experience, including a decade in senior leadership at Bayer AG’s Global Oncology Clinical Development organization.</p>
 
-        <div class="profiles" aria-label="Selected external profiles">
-          <a href="https://pathora-institute.com/team" target="_blank" rel="noopener noreferrer">PATHORA ↗</a>
-          <a href="https://www.jns.org/david-adler" target="_blank" rel="noopener noreferrer">JNS Author Profile ↗</a>
-          <a href="https://blogs.timesofisrael.com/author/david-adler/?anchor=about-me" target="_blank" rel="noopener noreferrer">Times of Israel Author Profile ↗</a>
-          <a href="https://www.washingtonexaminer.com/author/david-adler/" target="_blank" rel="noopener noreferrer">Washington Examiner Author Profile ↗</a>
-          <a href="https://www.amazon.es/stores/Prof-David-Adler/author/B0HJF7Z96C?language=en&amp;ref=ap_rdr&amp;shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">Amazon Author Page ↗</a>
+            <p>He holds academic appointments at the Hebrew University of Jerusalem, Ben-Gurion University of the Negev, and the University of Bonn. His work focuses on the strategic decisions that shape the path from scientific discovery through clinical development and influence whether promising innovations ultimately become medicines.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -331,7 +351,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">02 · Core Expertise</span>
+            <span class="section-number">01 · Core Expertise</span>
             <h3>Oncology Clinical Drug Development &amp; R&amp;D Thought Leadership</h3>
           </div>
           <p class="section-intro">Specialist life-science writing on oncology development strategy, evidence generation, translational research, R&amp;D decision-making and clinical execution.</p>
@@ -395,7 +415,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">03 · High-Level Policy</span>
+            <span class="section-number">02 · High-Level Policy</span>
             <h3>Health, Pharmaceutical &amp; Science Policy</h3>
           </div>
           <p class="section-intro">Commentary connecting drug development, cancer research, supply resilience, biomedical investment and access to broader public-policy questions.</p>
@@ -437,7 +457,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">04 · Independent Coverage</span>
+            <span class="section-number">03 · Independent Coverage</span>
             <h3>Media Coverage</h3>
           </div>
           <p class="section-intro">Independent reporting and profiles about Professor Adler, his work and initiatives.</p>
@@ -447,7 +467,7 @@
           <article class="outlet">
             <div class="outlet-name">The Scientist <span class="badge">Media coverage</span></div>
             <ul class="article-list">
-              <li><a class="article-title" href="https://www.the-scientist.com/a-new-course-bridges-the-gap-between-discovery-and-drug-development-75003" target="_blank" rel="noopener noreferrer">A New Course Bridges the Gap Between Discovery and Drug Development</a></li>
+              <li><a class="article-title" href="https://www.the-scientist.com/a-new-course-bridges-the-gap-between-discovery-and-drug-development-75003" target="_blank" rel="noopener noreferrer">A New Initiative Bridges the Gap Between Discovery and Drug Development</a></li>
             </ul>
           </article>
 
@@ -475,7 +495,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">05 · Innovation Ecosystems</span>
+            <span class="section-number">04 · Innovation Ecosystems</span>
             <h3>Biotechnology, Translational Medicine &amp; Innovation</h3>
           </div>
           <p class="section-intro">Writing on biomedical innovation, biotechnology ecosystems, research translation, capability building and regional life-science strategy.</p>
@@ -514,7 +534,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">06 · Public Commentary</span>
+            <span class="section-number">05 · Public Commentary</span>
             <h3>Oncology, Drug Development &amp; Capability Strategy</h3>
           </div>
           <p class="section-intro">Accessible public commentary using strategic analogies to explore cancer, drug-development decisions, biomedical innovation and national capability.</p>
@@ -542,7 +562,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">07 · Management</span>
+            <span class="section-number">06 · Management</span>
             <h3>Business &amp; Decision-Making</h3>
           </div>
           <p class="section-intro">Writing that extends evidence-based decision principles beyond biomedicine into organizational strategy and leadership.</p>
@@ -563,7 +583,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">08 · News</span>
+            <span class="section-number">07 · News</span>
             <h3>News &amp; Announcements</h3>
           </div>
           <p class="section-intro">Corporate announcements are separated from independent media coverage to keep the distinction clear.</p>
@@ -584,7 +604,7 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <span class="section-number">09 · Authored Works</span>
+            <span class="section-number">08 · Authored Works</span>
             <h3>Books</h3>
           </div>
           <p class="section-intro">Books published in 2026 are presented separately from the professional publication record.</p>
@@ -596,7 +616,7 @@
             <ul class="book-list">
               <li><strong>Where Is the Medicine?</strong>: Why Turning Scientific Discoveries Into Medicines Is Challenging</li>
               <li><strong>ANANKION</strong>: An AI Medical Thriller</li>
-              <li><strong>TAKE IT?</strong>: A Social Prediction Game</li>
+              <li><strong>Would You Take It?</strong>: A Social Prediction Game</li>
             </ul>
           </div>
 
@@ -609,6 +629,7 @@
               <li>How Do Doctors Find Out What Kind of Cancer It Is</li>
               <li>Why Do Cancer Cells Keep Growing</li>
               <li>Why Do the Checkups Continue After Cancer Treatment</li>
+              <li>Why Do Doctors Use More Than One Cancer Treatment</li>
             </ul>
           </div>
         </div>
